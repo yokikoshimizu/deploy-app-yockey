@@ -33,6 +33,10 @@ function App() {
     setShowtext(text)
   };
 
+  const handleClickReset = () => {
+    setShowtext(false)
+  };
+
   const handleChange = (e) => {
     setText(e.target.value);
   };
@@ -50,6 +54,7 @@ function App() {
 
       <div>
         <button onClick={handleClickOutPut}>button</button>
+        <button onClick={handleClickReset}>Reset</button>
         <input type="text" value={text} onChange={handleChange} />
         {showtext}
       </div>
