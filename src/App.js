@@ -49,15 +49,15 @@ function App() {
   };
 
   const handleClickStone = () => {
-    setPcs(pcs)
+    setPcs("ぐー")
   };
 
   const handleClickCissors = () => {
-    setPcs(pcs)
+    setPcs("ちょき")
   };
 
   const handleClickPaper = () => {
-    setPcs(pcs)
+    setPcs("ぱー")
   };
 
 
@@ -89,8 +89,8 @@ function App() {
         <button onClick={handleClickStone}>ぐー</button>
         <button onClick={handleClickCissors}>ちょき</button>
         <button onClick={handleClickPaper}>ぱー</button>
-        <p>あなたの手:{pcs ? setPcs : "" }</p>
-        <p>CPUの手:{pcs ? setPcs : "" }</p>
+        <p>あなたの手:{pcs}</p>
+        <p>CPUの手:</p>
       </div>
     </div>
   );
