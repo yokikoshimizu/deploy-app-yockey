@@ -7,6 +7,7 @@ function App() {
   const [text, setText ] = useState('');
   const [showtext, setShowtext ] = useState('');
   const [pcs, setPcs ] = useState('')
+  const [isText, setIsText] = useState(false)
   
   function buttonConsole() {
     console.log("Hello World")
@@ -32,6 +33,11 @@ function App() {
 
   const handleClickOutPut = () => {
     setShowtext(text)
+    if (text === "") {
+      setIsText(true)
+    } else {
+      setIsText(false)
+    }
   };
 
   const handleClickReset = () => {
@@ -73,7 +79,7 @@ function App() {
         {showtext}
       </div>
       <div>
-        {text ?  "" : <p style={{color:"red"}}>何か文字を入力してください。</p> }
+        {isText ? <p style={{color:"red"}}>何か文字を入力してください。</p> : "" }
       </div>
       <div>
         <button onClick={buttonConsole}>Hello World</button>
