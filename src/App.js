@@ -60,6 +60,9 @@ function App() {
     setPcs("ぱー")
   };
 
+  const janken = ["ぐー","ちょき","ぱー"];
+  const random = Math.floor(Math.random()*3);
+
 
    
 
@@ -90,7 +93,7 @@ function App() {
         <button onClick={handleClickCissors}>ちょき</button>
         <button onClick={handleClickPaper}>ぱー</button>
         <p>あなたの手:{pcs}</p>
-        <p>CPUの手:</p>
+        <p>CPUの手:{janken[random]}</p>
       </div>
     </div>
   );
